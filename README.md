@@ -1,27 +1,32 @@
-# ReleaseApp
+# Desafio-Target-Sistemas-App
+Desafio de Desenvolvedor FullStack da Target Sistemas. Backend Desenvolvido em C#
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
+## Critérios de Aceite de Negócio:
 
-## Development server
+- As propriedades de cada lançamento são: Id, descrição, data, valor, avulso, status.
+- O status pode ser “Válido” ou “Cancelado”
+- O Id deve ser o identificador único do lançamento
+- A descrição deve ser alfanumérica para ajudar o usuário a identificar o lançamento
+- A data deve ser a data que foi feito o lançamento na conta corrente
+- O valor do lançamento pode ser positivo ou negativo
+- O lançamento pode ser avulso (lançamento pelo usuário manualmente), ou não (lançamento por algum processo).
+- A tela do extrato deve ter um filtro de range de data, e a range inicial deve ser 2 dias. Dessa forma, deve vir mostrando os dados do extrato referente a esses últimos 2 dias.
+- Ao mudar as datas deve carregar os lançamentos de acordo com as novas datas
+- Deve ser possível incluir um lançamento válido no extrato de forma avulsa (deve ser identificado no extrato como avulso)
+- Deve ser possível alterar um lançamento avulso e válido do extrato, onde poderá ser alterado somente o valor e a data.
+- Deve ser possível cancelar um lançamento válido e avulso do extrato
+- Deve existir um totalizador mostrando o valor total dos lançamentos que foram listados no extrato.
+- Deve existir uma rota na API para inserir um lançamento NÃO AVULSO na conta corrente, deve receber a descrição, valor e data. Lançamento deve ser gerado como “Não Avulso” e “Válido”.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Critérios de Aceite Técnicos:
 
-## Code scaffolding
+- Obrigatório utilizar frontend em Angular
+- Obrigatório utilizar backend em .NET (preferencialmente .NET 6)
+- Recomendado utilizar SPA, dessa forma, teremos um serviço apenas para a API e o APP (o template do próprio - Visual Studio já cria a API dessa forma).
+- Obrigatório utilizar Entity Framework de ORM para persistência.
+- Recomendado utilizar Material Angular para os objetos da tela, como inputs, tabelas, grids, ou o que for do agrado para criação da página.
+- É obrigatório que a comunicação entre APP e API seja REST utilizando JSON para as comunicações que necessitam de um objeto.
+- Não tem restrição paras a arquitetura a ser utilizada, porém é recomendado que seja utilizado alguma arquitetura para organização do código do front e do back.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+NÃO ESQUEÇA DE INSERIR O LINK DO SEU REPOSITÓRIO NO GITHUB COM O CÓDIGO FONTES QUE VOCÊ DESENVOLVEU.
