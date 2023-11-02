@@ -1,0 +1,100 @@
+/*.form-container {
+  position: absolute;
+  left: 20px;
+  top: 120px;
+}
+
+.title-form {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 36px;
+  color: #434343;
+}
+
+.form-container mat-form-field + mat-form-field {
+  margin-left: 8px;
+}
+
+.form-container mat-form-field {
+  width: 220px;
+  height: 75px;
+}
+
+.form-container form {
+  margin-bottom: 20px;
+}
+
+.form-container form > * {
+  margin: 12px 0;
+}
+
+.form-fields {
+  display: none;
+}*/
+
+.container-form-release {
+  display: flex;
+  flex-direction: column;
+  width: 430px;
+  position: absolute;
+  top: 150px;
+  margin-left: 20px;
+
+  @media only screen and (max-width: 1170px) {
+    margin-left: 200px;
+  }
+
+  @media only screen and (max-width: 1000px) {
+    top: 500px;
+    left: 80px;
+  }
+}
+
+.container-form-release form {
+  border-right: 2px solid #434343;
+  margin-bottom: 20px;
+
+  @media only screen and (max-width: 1170px) {
+    border-right: none;
+    height: 350px;
+    border-bottom: 2px solid #434343;
+  }
+}
+
+.title-form {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 36px;
+  color: #434343;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="datetime-local"],
+select {
+  width: 80%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  display: block;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 800;
+}

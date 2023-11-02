@@ -1,0 +1,76 @@
+<div class="container-grid-release">
+  <h1 class="total-releases">
+    Total de Lançamentos: {{ this.releases.length }}
+  </h1>
+  <div class="container-title-table">
+    <h1>Lista de Lançamentos</h1>
+  </div>
+  <div class="container-data"></div>
+
+  <mat-grid-list cols="4" gutterSize="6px" rowHeight="100px">
+    <mat-grid-tile *ngFor="let release of releases">
+      <div class="item-release">
+        <label class="label-data">{{ formatData(release.data) }}</label>
+        <label class="label-valor">{{ formatValor(release.valor) }}</label>
+        <label class="label-desc">{{ release.descricao }}</label>
+        <div class="label-status">
+          <label>Status: </label>
+          <label
+            [style.color]="release.status === 'Válido' ? '#50C878' : '#FF5733'"
+            >{{ release.status }}</label
+          >
+        </div>
+
+        <div class="label-avulso">
+          <label>Avulso: </label>
+          <label
+            [style.color]="release.avulso === 'Avulso' ? '#50C878' : '#FF5733'"
+            >{{ release.avulso }}</label
+          >
+        </div>
+        <button
+          mat-icon-button
+          class="btn-delete"
+          color="warn"
+          (click)="deleteRelease(release.id)"
+        >
+          <mat-icon>delete</mat-icon>
+        </button>
+        <button
+          mat-icon-button
+          class="btn-update"
+          color="accent"
+          (click)="selectRelease(release)"
+        >
+          <mat-icon>update</mat-icon>
+        </button>
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
+
+<app-form-release></app-form-release>
+<form (ngSubmit)="filtrarLancamentos()" class="form-teste">
+  <h3 class="title-form-filter">Filtrar lançamentos:</h3>
+
+  <div>
+    <input
+      type="text"
+      id="dataDigitada"
+      name="dataDigitada"
+      placeholder="Data final"
+      [(ngModel)]="dataDigitada"
+    />
+  </div>
+
+  <div>
+    <button
+      mat-mini-fab
+      color="primary"
+      [disabled]="meuFormulario.invalid"
+      type="submit"
+    >
+      <mat-icon>search</mat-icon>
+    </button>
+  </div>
+</form>

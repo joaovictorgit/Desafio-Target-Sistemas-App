@@ -1,0 +1,58 @@
+<div class="container-form-release">
+  <h1 class="title-form">{{ title_form }}</h1>
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <div class="form-group">
+      <label for="descricao">Descrição:</label>
+      <input
+        type="text"
+        id="descricao"
+        name="descricao"
+        [(ngModel)]="descricao"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="valor">Valor:</label>
+      <input type="text" id="valor" name="valor" [(ngModel)]="valor" />
+    </div>
+
+    <div class="form-group" *ngIf="checkUpdate !== true">
+      <label for="avulso">Avulso:</label>
+      <select id="avulso" name="avulso" [(ngModel)]="avulso">
+        <option value="" disabled selected>Selecione o avulso</option>
+        <option value="nao-avulso">Não Avulso</option>
+        <option value="valido">Avulso</option>
+      </select>
+    </div>
+
+    <div class="form-group" *ngIf="checkUpdate === true && avulso === 'avulso'">
+      <label for="status">Status:</label>
+      <select id="status" name="status" [(ngModel)]="status">
+        <option value="" disabled selected>Selecione o status</option>
+        <option value="valido-status">Válido</option>
+        <option value="cancelado">Cancelado</option>
+      </select>
+    </div>
+
+    <div
+      class="form-group"
+      *ngIf="checkUpdate === true || avulso === 'nao-avulso'"
+    >
+      <label for="valor">Data:</label>
+      <input
+        class="data-form"
+        type="datetime-local"
+        id="data"
+        name="data"
+        [(ngModel)]="data"
+      />
+    </div>
+
+    <button
+      type="submit"
+      [style.background]="checkUpdate === false ? '#007bff' : '#E49B0F'"
+    >
+      {{ checkUpdate === false ? "Enviar" : "Atualizar" }}
+    </button>
+  </form>
+</div>
