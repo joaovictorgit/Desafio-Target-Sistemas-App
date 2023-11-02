@@ -32,4 +32,4 @@ Desafio de Desenvolvedor FullStack da Target Sistemas. Backend Desenvolvido em C
 NÃO ESQUEÇA DE INSERIR O LINK DO SEU REPOSITÓRIO NO GITHUB COM O CÓDIGO FONTES QUE VOCÊ DESENVOLVEU.
 
 ## Aplicação
-![conversation-image]('./src/assets/app-release.png')
+![conversation-image]('src/assets/app-release.png')
