@@ -1,4 +1,5 @@
 # Desafio-Target-Sistemas-App
+
 Desafio de Desenvolvedor FullStack da Target Sistemas. Backend Desenvolvido em C#
 
 ## Critérios de Aceite de Negócio:
@@ -28,8 +29,8 @@ Desafio de Desenvolvedor FullStack da Target Sistemas. Backend Desenvolvido em C
 - É obrigatório que a comunicação entre APP e API seja REST utilizando JSON para as comunicações que necessitam de um objeto.
 - Não tem restrição paras a arquitetura a ser utilizada, porém é recomendado que seja utilizado alguma arquitetura para organização do código do front e do back.
 
-
 NÃO ESQUEÇA DE INSERIR O LINK DO SEU REPOSITÓRIO NO GITHUB COM O CÓDIGO FONTES QUE VOCÊ DESENVOLVEU.
 
 ## Aplicação
-![conversation-image]('src/assets/app-release.png')
+
+![App](./src/assets/app-release.png)
